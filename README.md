@@ -40,7 +40,13 @@ sudo pacman -S jq
 
 ## 使用方法
 
-### 基本语法
+### 快速安装（推荐）
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ForeverWorld/cc-init/refs/heads/main/claude-env-setup.sh | bash -s -- "你的API_URL" "你的API_KEY"
+```
+
+### 本地使用
 
 ```bash
 ./claude-env-setup.sh <base-url> <api-key>
@@ -53,21 +59,26 @@ sudo pacman -S jq
 
 ### 使用示例
 
-#### 1. 使用默认 API 地址
+#### 1. 快速安装 - 使用自定义 API 地址
 
 ```bash
-./claude-env-setup.sh https://api.aicodemirror.com/api/claudecode your-api-key-here
+curl -fsSL https://raw.githubusercontent.com/ForeverWorld/cc-init/refs/heads/main/claude-env-setup.sh | bash -s -- "https://your-custom-api.com/v1" "your-api-key-here"
 ```
 
-#### 2. 使用自定义 API 地址
+#### 2. 快速安装 - 使用官方 API 地址
 
 ```bash
-./claude-env-setup.sh https://your-custom-api.com/v1 your-api-key-here
+curl -fsSL https://raw.githubusercontent.com/ForeverWorld/cc-init/refs/heads/main/claude-env-setup.sh | bash -s -- "https://api.anthropic.com" "your-api-key-here"
 ```
 
-#### 3. 使用官方 API 地址
+#### 3. 本地使用示例
 
 ```bash
+# 下载脚本
+curl -O https://raw.githubusercontent.com/ForeverWorld/cc-init/refs/heads/main/claude-env-setup.sh
+chmod +x claude-env-setup.sh
+
+# 运行脚本
 ./claude-env-setup.sh https://api.anthropic.com your-api-key-here
 ```
 
